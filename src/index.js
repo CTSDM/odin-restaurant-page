@@ -1,4 +1,8 @@
 import './style.css';
-import homePage from './pages/home.js';
+import homepage from './pages/home.js';
 
-homePage();
+(function () {
+    homepage();
+    const btnHome = document.querySelector("button.home");
+    btnHome.addEventListener("click", homepage);
+})();

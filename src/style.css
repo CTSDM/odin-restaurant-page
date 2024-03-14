@@ -4,7 +4,7 @@ body {
 }
 
 .picture {
-    background: url('./images/restaurant_basic.jpg');
+    background: url('./images/restaurant_basic.jpg') no-repeat;
     background-size: 500px;
     width: 600px;
     height: 400px;
