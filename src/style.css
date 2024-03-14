@@ -10,6 +10,10 @@ body {
     height: 400px;
 }
 
+#chef {
+    width: 90vw;
+}
+
 nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, 100px);
