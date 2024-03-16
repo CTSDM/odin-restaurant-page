@@ -1,12 +1,13 @@
 import './style.css';
 import homepage from './pages/home.js';
 import about from './pages/about.js';
+import menu from './pages/menu.js';
 
 (function () {
 
     const lastButtonCalled = ["home"];
     const buttonListClass = ['home', 'menu', 'delivery', 'about'];
-    const funcsList = [homepageCall, aboutCall, homepageCall, aboutCall];
+    const funcsList = [homepageCall, menu, homepageCall, aboutCall];
     homepage();
     buttonListClass.forEach((e, index) => {
         const btn = document.querySelector(`button.${e}`);

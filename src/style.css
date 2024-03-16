@@ -52,3 +52,30 @@ nav {
     font-size: 1.3rem;
     font-weight: 700;
 }
+
+.menu {
+    display: grid;
+    gap: 20px;
+}
+
+.appetizers,
+.main-dishes,
+.desserts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    padding: 10px;
+    background-color: skyblue;
+    align-items: top;
+    text-align: center;
+}
+
+.appetizers > div,
+.main-dishes > div,
+.desserts > div {
+    border: solid 2px green;
+}
+
+.menu img {
+    width: 80%;
+}
