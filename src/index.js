@@ -2,12 +2,13 @@ import './style.css';
 import homepage from './pages/home.js';
 import about from './pages/about.js';
 import menu from './pages/menu.js';
+import delivery from './pages/delivery.js';
 
 (function () {
 
     const lastButtonCalled = ["home"];
     const buttonListClass = ['home', 'menu', 'delivery', 'about'];
-    const funcsList = [homepageCall, menu, homepageCall, aboutCall];
+    const funcsList = [homepageCall, menuCall, deliveryCall, aboutCall];
     homepage();
     buttonListClass.forEach((e, index) => {
         const btn = document.querySelector(`button.${e}`);
@@ -23,6 +24,16 @@ import menu from './pages/menu.js';
     function aboutCall(e) {
         if (checkLastCall(e)) return;
         about();
+    }
+
+    function deliveryCall(e) {
+        if (checkLastCall(e)) return;
+        delivery();
+    }
+
+    function menuCall(e) {
+        if (checkLastCall(e)) return;
+        menu();
     }
 
     function checkLastCall(e) {

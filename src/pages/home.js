@@ -1,8 +1,10 @@
+import imageHome from '../images/restaurant_basic.jpg';
+
 export default function home() {
     const listContentParameters = [{type:"div", id:"welcome", class:"", text:"Welcome to our restaurant webpage"},
         {type:"div", id: "message", class: "", text: "Meet the new food in town."},
         {type:"div", id: "", class: "picture", text: ""},
-        {type:"div", id: "footer", class: "", text: "The authentic Chanin experience!"}];
+    ];
 
     const contentDiv = document.querySelector("#content");
     while(contentDiv.firstChild) {
@@ -11,6 +13,12 @@ export default function home() {
     for (const item of listContentParameters) {
         contentDiv.appendChild(initializeElement(item));
     }
+
+    const imgHome = document.createElement("img");
+    const pictureDiv = document.querySelector(".picture");
+    imgHome.src = imageHome;
+    imgHome.alt = "Image of a restaurant.";
+    pictureDiv.appendChild(imgHome);
 
     function initializeElement(parametersDict) {
         const tempDiv = document.createElement(parametersDict.type);

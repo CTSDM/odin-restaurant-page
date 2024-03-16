@@ -1,6 +1,8 @@
-body {
+body, html {
     padding: 0;
     margin: 0;
+    background-color: lightgray;
+    height: 100%;
 }
 
 .picture {
@@ -22,11 +24,18 @@ nav {
     margin-bottom: 30px;
 }
 
-#content {
+.general-container {
+    height: 100%;
     display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     place-items: center;
     gap: 20px;
-    background: linear-gradient(100deg, red, blue 70%);
 }
 
 #welcome {
@@ -76,6 +85,6 @@ nav {
     border: solid 2px green;
 }
 
-.menu img {
-    width: 80%;
+img {
+    width: 100%;
 }
